@@ -1,0 +1,4 @@
+participant_id           = "pXX"
+set_name                 = "reports"
+permissions_boundary_arn = "arn:aws:iam::ACCOUNT:policy/hk-pXX-boundary"
+# Replace pXX and ACCOUNT with PARTICIPANT_ID and the boundary ARN from your env file.

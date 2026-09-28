@@ -1,0 +1,19 @@
+name: dashboard-deploy
+
+on:
+  pull_request:
+    paths: ["dashboard/**"]
+
+permissions: write-all
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - name: Deploy straight from the PR so reviewers can see it live
+        working-directory: dashboard
+        run: |
+          terraform init
+          terraform apply -auto-approve

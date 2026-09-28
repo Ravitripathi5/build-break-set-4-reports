@@ -1,0 +1,12 @@
+.env
+*.env.local
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+terraform.tfvars
+__pycache__/
+*.pyc
+.DS_Store
+__MACOSX/
+*-submission.zip
